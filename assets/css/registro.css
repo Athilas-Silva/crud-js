@@ -71,6 +71,7 @@ input[type="file"]{
     font-size: 17px;
     font-family: cursive;
     transition: .5s;
+    border: none;
 }
 
 .link:nth-child(1){

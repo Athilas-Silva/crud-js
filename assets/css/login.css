@@ -29,8 +29,8 @@ body{
     align-items: center;
     background-color: #e1e1e1;
     border: 1px solid black;
-    width: 30rem;
-    height: 30rem;
+    width: 35rem;
+    height: 35rem;
     border-radius: 8px;
 }
 
@@ -61,6 +61,28 @@ h2{
 
 #btn:hover{
     background-color: #2e1c2b;
+}
+
+a{
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+#register{
+    border-radius: 8px;
+    padding: 1rem;
+    border: none;
+    background-color: #d80c2e;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 1rem;
+    text-align: center;
+    transition: .5s;
+}
+
+#register:hover{
+    background-color: #893168;
 }
 
 a{

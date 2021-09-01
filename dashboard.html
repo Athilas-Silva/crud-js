@@ -11,16 +11,24 @@
 <body>
     <header>
         <h2><abbr title="Create | Read | Update | Delete">CRUD</abbr> de Funcionários</h2>
+        <a href="http://localhost:3000/">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
     </header>
 
     <div id="wrapper">
-        <button id="btn">
+        <a href="http://127.0.0.1:5500/cadastro.html"><button id="btn">
             <i class="fas fa-user-plus"></i>
-            <a href="http://127.0.0.1:5500/registro.html">Criar usuário</a>
+            Criar usuário
+        </button></a>
+
+        <input class="search" type="search" id="idUser" name="idUser" placeholder="Buscar">
+
+        <button id="btn-icon" type="button" onClick="listByID();">
+            <i class="fas fa-search"></i>
         </button>
-        <input class="search" type="search" id="idUser" name="idUser" value="">
-        <button id="btn-pesq" type="button" class="btn btn-primary" onClick="listByID();"><i class="fas fa-search"></i></button>
-    </div>   
+    </div>
+       
     <div class="list">
         <ul>
         </ul>
@@ -32,16 +40,16 @@
         function listaUsuario(loginuser) {
           for (var i = 0; i < loginuser.length; i++) {
             var listItem = document.createElement('li');
-            listItem.innerHTML += `<input type="text" class="id" id="idUser-${loginuser[i].idUser}" value="${loginuser[i].idUser}">`;
-            listItem.innerHTML += `<input type="text" class="nome" id="nome-${loginuser[i].idUser}" value="${loginuser[i].nome}">`;
-            listItem.innerHTML += `<input type="text"  id="emailUser-${loginuser[i].idUser}" value="${loginuser[i].emailUser}">`;
-            listItem.innerHTML += `<input type="text"  id="cargo-${loginuser[i].idUser}" value="${loginuser[i].cargo}">`;
-            listItem.innerHTML += `<input type="text"  id="salario-${loginuser[i].idUser}" value="${loginuser[i].salario}">`;
-            listItem.innerHTML += `<input type="text"  id="setor-${loginuser[i].idUser}" value="${loginuser[i].setor}">`;
-            listItem.innerHTML += `<input type="password" id="senhaUser-${loginuser[i].idUser}" value="${loginuser[i].senhaUser}">`;
-            listItem.innerHTML += `<button onclick="deleta(${loginuser[i].idUser});">Apagar</button>`;
-            listItem.innerHTML += `<button onclick="atualizar(${loginuser[i].idUser});">Atualizar</button>`;
-            listItem.innerHTML += `<img src="${loginuser[i].imagem_user}">`;
+            listItem.innerHTML += `<strong><input type="text" class="id-content" id="idUser-${loginuser[i].idUser}" value="${loginuser[i].idUser}"></strong>`;
+            listItem.innerHTML += `<input type="text" class="name-user" id="nome-${loginuser[i].idUser}" value="${loginuser[i].nome}">`;
+            listItem.innerHTML += `<input type="text" class="email-user" id="emailUser-${loginuser[i].idUser}" value="${loginuser[i].emailUser}">`;
+            listItem.innerHTML += `<input type="text" class="cargo-user" id="cargo-${loginuser[i].idUser}" value="${loginuser[i].cargo}">`;
+            listItem.innerHTML += `<input type="text" class="salario-user" id="salario-${loginuser[i].idUser}" value="${loginuser[i].salario}">`;
+            listItem.innerHTML += `<input type="text" class="setor-user" id="setor-${loginuser[i].idUser}" value="${loginuser[i].setor}">`;
+            listItem.innerHTML += `<input type="password" class="senha-user" id="senhaUser-${loginuser[i].idUser}" value="${loginuser[i].senhaUser}">`;
+            listItem.innerHTML += `<button class="btn-delete" onclick="deleta(${loginuser[i].idUser});"><i class="fas fa-trash-alt"></i></button>`;
+            listItem.innerHTML += `<button class="btn-update" onclick="atualizar(${loginuser[i].idUser});"><i class="fas fa-edit"></i></button>`;
+            listItem.innerHTML += `<img class="img-user" src="${loginuser[i].imagem_user}">`;
             myList.appendChild(listItem);
           }
         }
@@ -61,7 +69,7 @@
             fetch('http://localhost:8080/loginuser/' + idUser, {
             method: 'DELETE'
             });
-            alert("Usuário Excluido com sucesso!")
+            alert("Usuário Excluído com Sucesso!");
             window.location.reload();
         }
 
@@ -77,8 +85,9 @@
                 body: `{"nome": "${nome}", "emailUser": "${emailUser}", "cargo": "${cargo}", "salario": "${salario}", "setor": "${setor}", "senhaUser": "${senhaUser}"}`,
                 headers: { 'Content-Type': 'application/json' },
             });
-            alert("Usuário Atualizado com sucesso!");
+            alert("Usuário Atualizado com Sucesso!");
             window.location.reload();
         }
     </script>
+    <script src="api-login.js"></script>
 </html>
