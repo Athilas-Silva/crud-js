@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%; /*Deixando a fonte 10px */
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(-45deg, #050404, #2e1c2b, #4a1942, #893168);
+    background-size: 400% 400%;
+    animation: backgroundTransition 8s ease-in-out infinite;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+.btn-pesq {
+    margin: 0 100;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#btn{
+    border-radius: 8px;
+    height: 3.5rem;
+    width: 12rem;
+    padding: 1rem;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#btn:hover{
+    background-color: #2e1c2b;
+}
+
+.search{
+    height: 3.5rem;
+    width: 20rem;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+.list{
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.list input{
+    width: 21rem;
+}
+
+@keyframes backgroundTransition{
+    0%{
+        background-position: 0% 80%;
+    }
+
+    50%{
+        background-position: 80% 100%;
+    }
+
+    100%{
+        background-position: 0% 90%;
+    }
+}

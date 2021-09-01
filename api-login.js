@@ -11,9 +11,9 @@ app.use("/assets", express.static("assets"))
 //Fazendo a conexão com o banco de dados
   const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'grupo-front',
+    user: 'root',
     port: 3306,
-    password: 'Senai115',
+    password: '',
     database: 'crudlogin'
   });
 
@@ -33,7 +33,7 @@ app.post("/", encoder,  function(req,res){
   var emailUser = req.body.emailUser;
   var senhaUser = req.body.senhaUser;
 
-  connection.query("SELECT * FROM loginuser WHERE emailLogin = ? AND senhaLogin = ? ",[emailUser, senhaUser], function(error, results, fields){
+  connection.query("SELECT * FROM loginuser WHERE emailUser = ? AND senhaUser = ? ",[emailUser, senhaUser], function(error, results, fields){
     if (results.length > 0) {
       res.redirect("/dashboard");
     } else {
