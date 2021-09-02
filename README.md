@@ -1,4 +1,4 @@
-<div align="center"><h1>Cadastro de Usuários </h1></div>
+<div align="center"><h1>Cadastro de Funcionários </h1></div>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Microsoft_Teams-6264A7?style=for-the-badge&logo=microsoft-teams&logoColor=white">  <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">  <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white">  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">  <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white">  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">  <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white">  <img src="https://img.shields.io/badge/microsoft%20azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white">  
@@ -24,6 +24,26 @@ O que este projeto pode fazer?
 1. O usuário acessa a página por meio de um login
 2. visualizar os registros na página principal
 3. cadastrar, editar e excluir registros
+
+### O que é CRUD? 🤔
+
+CRUD é a composição da primeira letra de 4 funções básicas de um sistema que trabalha com banco de dados:
+
+✅ C: Create (criar) - criar um novo registro.
+
+👁 R: Read (ler) - ler (exibir) as informações de um registro.
+
+♻️ U: Update (atualizar) - atualiza os dados do registro.
+
+❌ D: Delete (apagar) - apaga um registro.
+
+Por exemplo, se você precisa desenvolver desde uma simples agenda telefônica até um sistema complexo de gestão de faturamento de pedidos, você precisará realizar essas 4 ações para manipular as tabelas do banco de dados de seu sistema.
+
+Do ponto de vista do desenvolvedor, ele precisará criar as tabelas (modelos) do banco de dados, funções (controles) que atualizarão o banco de dados e as interfaces (visões), como página web ou aplicativo mobile, em que os usuários irão interagir com os dados.
+
+Em sistemas mais sofisticados, os dados do CRUD podem ser manipulados por outros sistemas via API - Application Programming Interface (em tradução livre, “Interface de Programação de Aplicativos”).
+
+[Saiba mais](https://angelopublio.com.br/blog/crud).
 
 ### :rocket: Tecnologias 
 
