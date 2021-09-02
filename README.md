@@ -11,7 +11,7 @@
 
 ![register](https://user-images.githubusercontent.com/71888055/131888184-be0c622a-48ac-4c96-9021-9aa8c94b8f97.png)
 
-<div><img src="./images/register.PNG"></div>
+![register](https://user-images.githubusercontent.com/71888055/131894052-6e8fe3f3-0e8b-48be-b700-ac85cb9bb79b.png)
 
 <div align="center"><h3><a href="http://crud-usuario.eastus2.cloudapp.azure.com:3000/">Acesse o site </a></h3></div>
 
