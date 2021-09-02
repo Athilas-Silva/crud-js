@@ -1,8 +1,10 @@
 <div align="center"><h1>Cadastro de Usuários </h1></div>
 
-<div><img src="./images/loginPage.png"></div>
+<div><img src="./images/loginPage.PNG"></div>
 
-<div><img src="./images/registerPage.png"></div>
+<div><img src="./images/dashbord.PNG"></div>
+
+<div><img src="./images/register.PNG"></div>
 
 <div align="center"><h3><a href="" >Acesse o site </a></h3></div>
 
