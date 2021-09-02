@@ -9,7 +9,7 @@
 
 <div><img src="./images/loginPage.PNG"></div>
 
-<div><img src="./images/dashbord.PNG"></div>
+![register](https://user-images.githubusercontent.com/71888055/131888184-be0c622a-48ac-4c96-9021-9aa8c94b8f97.png)
 
 <div><img src="./images/register.PNG"></div>
 
