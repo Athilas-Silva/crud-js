@@ -37,3 +37,14 @@ O que este projeto pode fazer?
 - Azure (Vm no azure hospeda as páginas web)
 - Git e GitHub
 
+----
+
+### Integrantes do grupo 🧑‍🎓 👩‍🎓
+
+- [Allan Santos](https://github.com/Dev-allanSantos)
+- [Antonio Augusto](https://github.com/Antonio1711)
+- [Athilas Silva](https://github.com/Athilas-Silva)
+- [João Duarte](https://github.com/JaoDuarte)
+- [Larissa Soares](https://github.com/larizwn)
+- [Lucas Galdino](https://github.com/LucasGaldinno)
+- [Victor Eduardo](https://github.com/ViictorSR388)
