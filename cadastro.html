@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="./assets/css/registro.css" />
     <link rel="shortcut icon" href="assets/img/1597454.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/6ced12f15b.js" crossorigin="anonymous"></script>
@@ -12,7 +12,8 @@
   <body>
     <div class="container">
       <h3 class="input-field first">Adicione as Informações</h3>
-      <form id="form" enctype="multipart/form-data" action="http://localhost:8080/loginuser/" method="POST">
+      <form id="form" action="http://localhost:8080/loginuser/" method="POST">
+        
         <input class="info input-field second" type="text" name="nome" id="nome" value="" placeholder="Nome" />
 
         <input class="info input-field second" type="text" placeholder="Email" id="emailUser" value="" name="emailUser"/>
@@ -25,41 +26,14 @@
 
         <input class="info input-field second" type="password" placeholder="Senha" id="senhaUser" value="" name="senhaUser" required/>
 
-        <label class="customize input-field third">
-          <input type="file" id="imagem_user" name="imagem_user" value="" />
-          <i class="fas fa-upload"></i>
-          Adicione uma foto
-        </label>
-
         <div>
           <button id="cadastro" type="submit" class="input-field fourth link" formtarget="_blank">
             Cadastrar
           </button>
-          <a class="input-field fourth link" href="http://127.0.0.1:5500/dashboard.html">Cancelar</a>
+          <a id="cancela" class="input-field fourth link" href="http://127.0.0.1:5500/dashboard.html">Cancelar</a>
         </div>
       </form>
     </div>
-
-    <script>
-      function inserir() {
-        const nome = document.getElementById('nome').value;
-        const emailUser = document.getElementById('emailUser').value;
-        const cargo = document.getElementById('cargo').value;
-        const salario = document.getElementById('salario').value;
-        const setor = document.getElementById('setor').value;
-        const senhaUser = document.getElementById('senhaUser').value;
-        const imagem_user = document.getElementById('imagem_user').files[0];
-        fetch('http://localhost:8080/loginuser', {
-          method: 'POST',
-          body: `{"nome": "${nome}", "emailUser": "${emailUser}", "cargo": "${cargo}", "salario": "${salario}", "setor": "${setor}", "senha": "${senhaUser}", "imagem_user": "${imagem_user}" }`,
-          headers: {
-            'Content-Type': 'multipart/form-data; boundary=something',
-          },
-        });
-        window.location.reload();
-      }
-    </script>
-
     <script src="api-cadastro.js"></script>
   </body>
 </html>

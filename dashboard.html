@@ -50,7 +50,6 @@
             listItem.innerHTML += `<input type="password" class="senha-user" id="senhaUser-${loginuser[i].idUser}" value="${loginuser[i].senhaUser}">`;
             listItem.innerHTML += `<button class="btn-delete" onclick="deleta(${loginuser[i].idUser});"><i class="fas fa-trash-alt"></i></button>`;
             listItem.innerHTML += `<button class="btn-update" onclick="atualizar(${loginuser[i].idUser});"><i class="fas fa-edit"></i></button>`;
-            listItem.innerHTML += `<img class="img-user" src="${loginuser[i].imagem_user}">`;
             myList.appendChild(listItem);
           }
         }

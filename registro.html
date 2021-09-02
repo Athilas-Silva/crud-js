@@ -12,54 +12,28 @@
   <body>
     <div class="container">
       <h3 class="input-field first">Adicione as Informações</h3>
-      <form id="form" enctype="multipart/form-data" action="http://localhost:8080/loginuser/" method="POST">
-        <input class="info input-field second" type="text" name="nome" id="nome" value="" placeholder="Nome" />
+      <form id="form" action="http://localhost:8080/loginuser/" method="POST">
 
-        <input class="info input-field second" type="text" placeholder="Email" id="emailUser" value="" name="emailUser"/>
+        <input class="info input-field second" type="text" id="nome" name="nome"  placeholder="Nome" />
+        
+        <input class="info input-field second" type="text" placeholder="Email" id="emailUser" name="emailUser"/>
+        
+        <input class="info input-field second" type="text" placeholder="Cargo" id="cargo"  name="cargo"/>
 
-        <input class="info input-field second" type="text" placeholder="Cargo" id="cargo" value="" name="cargo"/>
+        <input class="info input-field second" type="text" placeholder="Salário" id="salario" name="salario"/>
 
-        <input class="info input-field second" type="text" placeholder="Salário" id="salario" value="" name="salario"/>
+        <input class="info input-field second" type="text" placeholder="Setor" id="setor" name="setor"/>
 
-        <input class="info input-field second" type="text" placeholder="Setor" id="setor" value="" name="setor"/>
-
-        <input class="info input-field second" type="password" placeholder="Senha" id="senhaUser" value="" name="senhaUser" required/>
-
-        <label class="customize input-field third">
-          <input type="file" id="imagem_user" name="imagem_user" value="" />
-          <i class="fas fa-upload"></i>
-          Adicione uma foto
-        </label>
+        <input class="info input-field second" type="password" placeholder="Senha" id="senhaUser" name="senhaUser" required/>
 
         <div>
           <button id="cadastro" type="submit" class="input-field fourth link" formtarget="_blank">
             Cadastrar
           </button>
-          <a class="input-field fourth link" href="http://localhost:3000/">Cancelar</a>
+          <a id="cancela" class="input-field fourth link" href="http://localhost:3000/">Cancelar</a>
         </div>
       </form>
     </div>
-
-    <script>
-      function inserir() {
-        const nome = document.getElementById('nome').value;
-        const emailUser = document.getElementById('emailUser').value;
-        const cargo = document.getElementById('cargo').value;
-        const salario = document.getElementById('salario').value;
-        const setor = document.getElementById('setor').value;
-        const senhaUser = document.getElementById('senhaUser').value;
-        const imagem_user = document.getElementById('imagem_user').files[0];
-        fetch('http://localhost:8080/loginuser', {
-          method: 'POST',
-          body: `{"nome": "${nome}", "emailUser": "${emailUser}", "cargo": "${cargo}", "salario": "${salario}", "setor": "${setor}", "senha": "${senhaUser}", "imagem_user": "${imagem_user}" }`,
-          headers: {
-            'Content-Type': 'multipart/form-data; boundary=something',
-          },
-        });
-        window.location.reload();
-      }
-    </script>
-
     <script src="api-cadastro.js"></script>
   </body>
 </html>

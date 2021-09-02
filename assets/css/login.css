@@ -59,6 +59,12 @@ h2{
     transition: .5s;
 }
 
+.new-senha {
+    border: none;
+    margin-top: 2rem;
+    background-color: transparent;
+}
+
 #btn:hover{
     background-color: #2e1c2b;
 }

@@ -16,10 +16,17 @@
         <input class="text input-field second" name="senhaUser" type="password" placeholder="Senha">
         <input type="submit" class="input-field third" id="btn" value="LOGIN">
         <a href="http://127.0.0.1:5500/registro.html" class="input-field fourth" id="register">Registrar</a>
-        <a class="input-field fourth" href="#">Esqueceu a senha?</a>
+        <button class="new-senha" onclick="newSenha()"><a class="input-field fourth" href="#">Esqueceu a senha?</a></button>
     </div>
     </form>
 
     <script src="api-login.js"></script>
+    <script>
+    function newSenha() {
+        let email = prompt("Digite seu Email Aqui:");
+        console.log(email);
+        window.location.reload();
+    }
+    </script>
 </body>
 </html>
